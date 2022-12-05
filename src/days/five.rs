@@ -4,6 +4,10 @@ pub fn part_1(lines: Vec<String>) -> String {
     move_creates(lines, false)
 }
 
+pub fn part_2(lines: Vec<String>) -> String {
+  move_creates(lines, true)
+}
+
 fn move_creates(lines: Vec<String>, can_move_multiple: bool) -> String {
     let mut stacks: HashMap<usize, LinkedList<char>> = HashMap::new();
     let ts = (&lines.first().unwrap().len() / 4) + 1;
@@ -59,8 +63,4 @@ fn move_creates(lines: Vec<String>, can_move_multiple: bool) -> String {
     });
     stacks.sort_by(|(a, _), (b, _)| a.cmp(b));
     stacks.into_iter().map(|(_, v)| v).collect::<String>()
-}
-
-pub fn part_2(lines: Vec<String>) -> String {
-    move_creates(lines, true)
 }
