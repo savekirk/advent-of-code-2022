@@ -1,3 +1,4 @@
+#![feature(iter_next_chunk)]
 mod days;
 use std::{
     fs::File,
@@ -73,12 +74,27 @@ fn main() {
 
     // println!("Day 5 Part 1: {}", days::five::part_1(read_input("5")));
 
+    // println!(
+    //     "Day 5 Part 2 test : {}",
+    //     days::five::part_2(read_input("5test"))
+    // );
+
+    // println!("Day 5 Part 2: {}", days::five::part_2(read_input("5")));
+
+    // Day 6
+    // println!(
+    //     "Day 6 Part 1 test : {:?}",
+    //     days::six::part_1(read_input("6test"))
+    // );
+
+    // println!("Day 6 Part 1: {}", days::six::part_1(read_input("6")));
+
     println!(
-        "Day 5 Part 2 test : {}",
-        days::five::part_2(read_input("5test"))
+        "Day 6 Part 2 test : {}",
+        days::six::part_2(read_input("6test"))
     );
 
-    println!("Day 5 Part 2: {}", days::five::part_2(read_input("5")));
+    println!("Day 6 Part 2: {}", days::six::part_2(read_input("6")));
 }
 
 // Returns an Iterator to the Reader of the lines of the file.
